@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "product";
+
+package productclient;
+
+message DecrStockRequest {
+  int64 id = 1;
+  int64 num = 2;
+}
+message DecrStockResponse {
+}
+
+service Product {
+  rpc DecrStock(DecrStockRequest) returns(DecrStockResponse);
+  rpc DecrStockRevert(DecrStockRequest) returns(DecrStockResponse);
+}

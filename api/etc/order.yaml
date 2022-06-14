@@ -1,0 +1,15 @@
+Name: Order
+Host: 0.0.0.0
+Port: 8888
+
+ProductRpc:
+  Etcd:
+    Hosts:
+      - 172.16.115.26:2379
+    Key: product.rpc
+
+OrderRpc:
+  Etcd:
+    Hosts:
+      - 172.16.115.26:2379
+    Key: order.rpc

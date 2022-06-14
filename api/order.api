@@ -1,0 +1,17 @@
+type (
+	// 订单创建
+	CreateOrderRequest {
+		Uid    int64 `json:"uid"`
+		Pid    int64 `json:"pid"`
+		Amount int64 `json:"amount"`
+		Status int64 `json:"status"`
+	}
+	CreateOrderResponse {
+		Id int64 `json:"id"`
+	}
+)
+
+service Order {
+	@handler Order
+	post /api/orders(CreateOrderRequest) returns (CreateOrderResponse)
+}
